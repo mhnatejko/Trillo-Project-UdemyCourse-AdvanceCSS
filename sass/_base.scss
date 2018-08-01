@@ -17,6 +17,13 @@
     --line: 1px solid var(--color-grey-light-2);
 }
 
+$bp-largest: 75em; //1200px(breakpoint (device width) / 16px czcionka
+$bp-large: 68.75em; //1100px
+$bp-medium: 56.25em; //900px 
+$bp-small: 37.5em; //600px
+$bp-smallest: 31.25em; //500px
+
+
 * {
     margin: 0;
     padding: 0;
@@ -26,11 +33,18 @@
 *::before,
 *::after {
     box-sizing: inherit;
-    font-size: 62.5% // = 1 rem <--- 10px / 16px = 62.5%
+    
 }
 
 html {
     box-sizing: border-box;
+    font-size: 62.5%; // = 1 rem <--- 10px / 16px = 62.5%
+
+    @media only screen and (max-width: $bp-large) {
+        font-size: 50%;
+        // max-width: 100%;
+        // width: 100%;
+    }
 }
 
 body {
